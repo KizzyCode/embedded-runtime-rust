@@ -1,0 +1,30 @@
+[package]
+name = "embedded-runtime"
+version = "0.1.0"
+edition = "2021"
+authors = ["KizzyCode Software Labs./Keziah Biermann <development@kizzycode.de>"]
+keywords = []
+categories = []
+description = "A tiny async runtime for embedded devices"
+license = "BSD-2-Clause OR MIT"
+repository = "https://github.com/KizzyCode/embedded-runtime-rust"
+readme = "README.md"
+
+
+[badges]
+
+
+[features]
+default = []
+
+
+[dependencies]
+# FIXME
+embedded-threadsafe = { git = "https://github.com/KizzyCode/embedded-threadsafe-rust", version = "0.2.0" }
+
+
+[profile.release]
+overflow-checks = true
+
+[profile.bench]
+overflow-checks = true
