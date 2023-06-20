@@ -74,7 +74,7 @@ impl Future for CountdownFuture {
 }
 
 // This creates a new runtime and executes the given futures in an async context
-run!(await {
+run!(async {
     CountdownFuture::new(3).await;
     CountdownFuture::new(7).await;
 }).expect("failed to perform countdowns");
