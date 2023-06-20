@@ -85,7 +85,7 @@ where
 macro_rules! run {
     ($($futures:expr),+) => {{
         /// Executes the given futures
-        fn _execute() -> core::result::Result<(), $crate::error::Error> {
+        let execute = || -> core::result::Result<(), $crate::error::Error> {
             // Create executor
             let mut executor: $crate::executor::Executor<'_, dyn core::future::Future<Output = ()>> =
                 $crate::executor::Executor::new();
@@ -99,9 +99,9 @@ macro_rules! run {
             // Execute the futures
             executor.run();
             Ok(())
-        }
+        };
 
         // Execute all futures
-        _execute()
+        execute()
     }};
 }
