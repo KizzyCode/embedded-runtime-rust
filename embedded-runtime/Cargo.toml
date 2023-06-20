@@ -1,6 +1,6 @@
 [package]
 name = "embedded-runtime"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 authors = ["KizzyCode Software Labs./Keziah Biermann <development@kizzycode.de>"]
 keywords = []
@@ -19,8 +19,6 @@ default = []
 
 
 [dependencies]
-# FIXME
-embedded-threadsafe = { git = "https://github.com/KizzyCode/embedded-threadsafe-rust", version = "0.2.0" }
 
 
 [profile.release]
