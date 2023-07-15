@@ -12,9 +12,9 @@ platform:
   - x86_64-apple-darwin
 
 
-# The Rust feature matrix
+# The Rust target matrix
 configuration:
-  - --features=
+  - --manifest-path=./embedded-runtime/Cargo.toml
 
 
 # General environment vars
