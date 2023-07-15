@@ -1,3 +1,5 @@
+#![allow(deprecated)]
+
 use embedded_runtime::FutureBox;
 use std::{
     future::Future,
