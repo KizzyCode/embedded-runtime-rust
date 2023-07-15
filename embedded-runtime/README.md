@@ -1,5 +1,10 @@
 [![License BSD-2-Clause](https://img.shields.io/badge/License-BSD--2--Clause-blue.svg)](https://opensource.org/licenses/BSD-2-Clause)
 [![License MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![AppVeyor CI](https://ci.appveyor.com/api/projects/status/github/KizzyCode/embedded-runtime-rust?svg=true)](https://ci.appveyor.com/project/KizzyCode/embedded-runtime-rust)
+[![docs.rs](https://docs.rs/embedded-runtime/badge.svg)](https://docs.rs/embedded-runtime)
+[![crates.io](https://img.shields.io/crates/v/embedded-runtime.svg)](https://crates.io/crates/embedded-runtime)
+[![Download numbers](https://img.shields.io/crates/d/embedded-runtime.svg)](https://crates.io/crates/embedded-runtime)
+[![dependency status](https://deps.rs/crate/embedded-runtime/latest/status.svg)](https://deps.rs/crate/embedded-runtime)
 
 
 # `embedded-runtime`
