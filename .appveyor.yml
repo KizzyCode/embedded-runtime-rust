@@ -4,17 +4,18 @@ build: false
 
 # The Rust target platforms
 platform:
-  - x86_64-pc-windows-msvc
-  - i686-pc-windows-msvc
-  - x86_64-pc-windows-gnu
-  - i686-pc-windows-gnu
+  # Disable windows builds
+  # - x86_64-pc-windows-msvc
+  # - i686-pc-windows-msvc
+  # - x86_64-pc-windows-gnu
+  # - i686-pc-windows-gnu
   - x86_64-unknown-linux-gnu
   - x86_64-apple-darwin
 
 
-# The Rust target matrix
+# The Rust feature matrix
 configuration:
-  - --manifest-path=./embedded-runtime/Cargo.toml
+  - --features=
 
 
 # General environment vars
