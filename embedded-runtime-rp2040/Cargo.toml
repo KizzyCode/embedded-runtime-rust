@@ -1,6 +1,6 @@
 [package]
 name = "embedded-runtime-rp2040"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 authors = ["KizzyCode Software Labs./Keziah Biermann <development@kizzycode.de>"]
 keywords = []
@@ -19,8 +19,7 @@ default = []
 
 
 [dependencies]
-# FIXME
-embedded-runtime = { git = "https://github.com/KizzyCode/embedded-runtime-rust.git", version = "0.1.1" }
+embedded-runtime = "0.1.2"
 cortex-m = "0.7.7"
 
 
