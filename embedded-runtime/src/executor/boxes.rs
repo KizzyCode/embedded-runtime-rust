@@ -1,4 +1,5 @@
 //! A stack-allocated box for futures
+#![deprecated = "A lot of unsafe code that is not necessary (use the `run!`-macro instead)"]
 
 use crate::{err, error::Error};
 use core::{

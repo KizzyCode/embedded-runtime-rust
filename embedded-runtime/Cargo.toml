@@ -1,6 +1,6 @@
 [package]
 name = "embedded-runtime"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 authors = ["KizzyCode Software Labs./Keziah Biermann <development@kizzycode.de>"]
 keywords = []

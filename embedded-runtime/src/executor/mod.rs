@@ -3,6 +3,7 @@
 mod boxes;
 mod waker;
 
+#[allow(deprecated)]
 pub use crate::executor::boxes::FutureBox;
 use crate::{err, error::Error, runtime};
 use core::{future::Future, pin::Pin, task::Context};

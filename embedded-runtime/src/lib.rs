@@ -5,4 +5,6 @@ pub mod error;
 pub mod executor;
 mod runtime;
 
-pub use crate::executor::{Executor, FutureBox};
+pub use crate::executor::Executor;
+#[allow(deprecated)]
+pub use crate::executor::FutureBox;
