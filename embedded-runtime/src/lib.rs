@@ -4,7 +4,6 @@
 pub mod error;
 pub mod executor;
 mod runtime;
+pub mod yield_;
 
-pub use crate::executor::Executor;
-#[allow(deprecated)]
-pub use crate::executor::FutureBox;
+pub use crate::{executor::Executor, yield_::yield_now};

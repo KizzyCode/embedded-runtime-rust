@@ -168,6 +168,26 @@ fn test_multipoll_immediately() {
     assert!(POLLED.load(SeqCst) >= 8, "future has not been polled often enough");
 }
 
+/// Tests the `yield_now` functionality
+fn test_yield() {
+    // Create the observer flag and build the executor
+    static POLLED: AtomicBool = AtomicBool::new(false);
+
+    // Create the interleaved tasks
+    let assert_polled = async {
+        // Give up a timeslice to allow the other future to execute and set the polled flag
+        embedded_runtime::yield_now().await;
+        assert!(POLLED.load(SeqCst), "second future has not been polled")
+    };
+    let set_polled = async {
+        // Set the polled flag
+        POLLED.store(true, SeqCst);
+    };
+
+    // Execute the tasks
+    run!(assert_polled, set_polled).expect("failed to execute futures");
+}
+
 /// Executes all tests serially
 ///
 /// # Important
@@ -177,4 +197,5 @@ fn all() {
     test_timer();
     test_mutliple_timers();
     test_multipoll_immediately();
+    test_yield();
 }
