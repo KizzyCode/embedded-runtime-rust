@@ -1,0 +1,30 @@
+[package]
+name = "embedded-runtime-nrf52840"
+version = "0.2.0"
+edition = "2021"
+authors = ["KizzyCode Software Labs./Keziah Biermann <development@kizzycode.de>"]
+keywords = []
+categories = []
+description = "A tiny async runtime for embedded devices, with predefined runtime hooks for the nrf52840"
+license = "BSD-2-Clause OR MIT"
+repository = "https://github.com/KizzyCode/embedded-runtime-rust"
+readme = "README.md"
+
+
+[badges]
+
+
+[features]
+default = []
+
+
+[dependencies]
+embedded-runtime = "0.2.0"
+cortex-m = "0.7.7"
+
+
+[profile.release]
+overflow-checks = true
+
+[profile.bench]
+overflow-checks = true
