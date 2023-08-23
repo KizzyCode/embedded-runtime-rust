@@ -1,2 +1,2 @@
 [workspace]
-members = ["embedded-runtime", "embedded-runtime-rp2040"]
+members = ["embedded-runtime", "embedded-runtime-nrf52840", "embedded-runtime-rp2040"]
