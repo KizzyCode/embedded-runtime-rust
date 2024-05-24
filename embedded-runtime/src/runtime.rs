@@ -12,5 +12,8 @@ extern "Rust" {
     /// # Important
     /// Events must not be lost. If an event is sent, but the receiver is not currently waiting, it must be retained until
     /// the receiver tries to wait again.
+    /// 
+    /// # Interrupt Safety
+    /// This function must be interrupt-safe.
     pub(crate) fn _runtime_sendevent_3YSaPmB7();
 }

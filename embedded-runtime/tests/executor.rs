@@ -176,7 +176,7 @@ fn test_yield() {
     // Create the interleaved tasks
     let assert_polled = async {
         // Give up a timeslice to allow the other future to execute and set the polled flag
-        embedded_runtime::yield_now().await;
+        embedded_runtime::spin_once().await;
         assert!(POLLED.load(SeqCst), "second future has not been polled")
     };
     let set_polled = async {
