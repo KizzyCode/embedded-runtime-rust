@@ -5,7 +5,7 @@ mod waker;
 use crate::{err, error::Error, runtime};
 use core::{future::Future, pin::Pin, task::Context};
 
-/// A tiny, single-threaded async executor suitable for embedded runtimes
+/// A tiny stack-based, single-threaded async executor suitable for embedded runtimes
 ///
 /// # Generics
 /// - `'a`: Tied to the lifetime of the pinned futures to execute (i.e. this executor must not outlive the futures it
@@ -38,10 +38,10 @@ where
     pub fn register(&mut self, future: Pin<&'a mut T>) -> Result<&mut Self, Error> {
         // Get the next free slot
         let Some(slot) = self.futures.get_mut(self.len) else {
-            return Err(err!("Executor has not enough storage to register more futures"));
+            return Err(err!("Executor has not enough space to register more futures"));
         };
 
-        // Box and store the future
+        // Store the future
         *slot = Some(future);
         self.len += 1;
         Ok(self)
