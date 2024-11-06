@@ -1,6 +1,6 @@
 [package]
 name = "embedded-runtime-rp2040"
-version = "0.3.0"
+version = "0.4.0"
 edition = "2021"
 authors = ["KizzyCode Software Labs./Keziah Biermann <development@kizzycode.de>"]
 keywords = []
@@ -19,7 +19,7 @@ default = []
 
 
 [dependencies]
-embedded-runtime = "0.3.0"
+embedded-runtime = "0.4.0"
 cortex-m = "0.7.7"
 
 
