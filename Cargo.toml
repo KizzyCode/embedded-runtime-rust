@@ -1,2 +1,3 @@
 [workspace]
 members = ["embedded-runtime", "embedded-runtime-nrf52840", "embedded-runtime-rp2040"]
+resolver = "2"
